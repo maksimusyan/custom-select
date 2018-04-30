@@ -1,6 +1,15 @@
 // Цвета различных элементов
 $border-color: #ddd;
 
-#custom_select{
+.custom_select_wrapper{
+  width: 100%;
+  max-width: 500px;
   border: 1px solid $border-color;
+
+  .csw_header{
+
+  }
+  .csw_list{
+    display: none;
+  }
 }

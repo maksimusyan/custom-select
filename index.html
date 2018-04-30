@@ -15,12 +15,21 @@
     </div>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
+            let list = {
+                '1':'Казань',
+                '2':'Москва',
+                '3':'Калининград',
+            };
             let selectTarget = document.getElementById('selectOne');
             let selectOne = new CustomSelect(selectTarget,{
-                mode: false
+                data: list,
+                onChange: function (values) {
+                    console.log(values);
+                }
+                //defaultValue: false, // строка или FALSE
+                //defaultName: false // строка или FALSE
             });
 
-            console.log(selectOne._opts);
         });
     </script>
 </body>
