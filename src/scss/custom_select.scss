@@ -1,3 +1,6 @@
-/*!
- * Custom Select v1.0.0
- */
+// Цвета различных элементов
+$border-color: #ddd;
+
+#custom_select{
+  border: 1px solid $border-color;
+}

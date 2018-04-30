@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="build/custom_select.css">
+    <script type="text/javascript" src="build/custom_select.min.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div id="selectOne"></div>
+    </div>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            let selectTarget = document.getElementById('selectOne');
+            let selectOne = new CustomSelect(selectTarget,{
+                mode: false
+            });
+
+            console.log(selectOne._opts);
+        });
+    </script>
+</body>
+</html>
