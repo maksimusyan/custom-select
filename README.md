@@ -32,7 +32,7 @@ npm run dev
 * custom_select.min.js
 
 ## Как использовать
-> ДЕМО: [index.html](index.html)
+> ПРИМЕР: [index.html](index.html)
 
 В коде страницы html в блоке "head" подключаем готовые файлы
 ```html
@@ -73,7 +73,7 @@ npm run dev
             // второй аргумент - параметры впадающего списка
             let selectOne = new CustomSelect(selectTarget,{
                 
-                // передаёт наш объект-список
+                // передаём наш объект-список
                 data: list,
                 
                 // подписываемся на событие выбора элемента выпадающго списка
