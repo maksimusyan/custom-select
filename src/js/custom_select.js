@@ -21,7 +21,7 @@ export default class CustomSelectClass
             defaultName: '--- выберите из списка ---', // Имя по-умолчанию (оно же - первый элемент списка)
             maxWidthHead: 300, // Максимальная ширина заголовка списка
             maxWidthList: 300, // Максимальная ширина списка
-            maxHeightList: 600, // Максимальная высота списка
+            maxHeightList: 400, // Максимальная высота списка
             scrollX: 'hidden', // Метод отображения горизонтального скролла
             scrollY: 'auto', // Метод отображения вертикального скролла
             onChange: function(){}, // callback-функция, которая будет вызвана при выборе элемента выпадающего списка
@@ -44,6 +44,10 @@ export default class CustomSelectClass
                     }
                 }
             }
+            // Задаём стили отображения
+            this._wrap.setAttribute('style','width:'+this._opts.maxWidthHead+'px;');
+            this._head.setAttribute('style','width:'+this._opts.maxWidthHead+'px;max-width:'+this._opts.maxWidthHead+'px;');
+            this._list.setAttribute('style','width:'+(this._opts.maxWidthList - 2)+'px;max-height:'+this._opts.maxHeightList+'px;overflow-x:'+this._opts.scrollX+';overflow-y:'+this._opts.scrollY+';');
             // Запускаем рендер элемента
             this.init();
         }

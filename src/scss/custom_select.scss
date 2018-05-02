@@ -1,16 +1,79 @@
-// Цвета различных элементов
-$border-color: #ddd;
+// Цвета
+$border-color: #c5c5c5;
+$drop-down-arrow-color: #989898;
+$list-box-shadow-color: #afafaf;
 
+// Основная обёртка выпадающего списка
 .custom_select_wrapper{
-  width: 100%;
-  max-width: 500px;
+  display: inline-block;
+  width: auto;
+  box-sizing: border-box;
   border: 1px solid $border-color;
-
+  padding: 0.1px;
+  position: static;
+  z-index: 1;
+  // Заголовок выпадающего списка, кнопка в виде <select>
   .csw_header{
-
+    display: inline-block;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    padding: .5rem 2rem .2rem .4rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    // Стрелка справа в заголовке выпадающего списка
+    &:after {
+      background: none;
+      color: $drop-down-arrow-color;
+      content: "\25BC";
+      font-size: .7rem;
+      padding: 0;
+      position: absolute;
+      right: 0.5rem;
+      top: .6rem;
+      z-index: 1;
+    }
   }
+  // Выпадающий список
   .csw_list{
     display: block;
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: 1px 0 0 -1px;
+    padding: 0;
+    border: 1px solid $border-color;
+    box-shadow: 0 2px 10px 0 $list-box-shadow-color;
+    background: #fff;
+    z-index: 2;
+    // Отдельный элемент выпадающего списка
+    .csw_item{
+      display: block;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      padding: .5rem 1rem;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1rem;
+      white-space: nowrap;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      // Последний элемент выпадающего списка
+      &:last-child{
+        margin-bottom: .3rem;
+      }
+      &:hover{
+        background: #eee;
+      }
+    }
   }
   .csw_list.hidden{
     display: none;

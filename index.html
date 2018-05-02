@@ -21,6 +21,12 @@
                 '2':'Москва',
                 '3':'Калининград',
             };
+            let list2 = {
+                '1':'Казань',
+                '2':'Москва',
+                '3':'Калининград',
+                '4':'Пенза',
+            };
             let selectTarget = document.getElementById('selectOne');
             let selectOne = new CustomSelect(selectTarget,{
                 data: list,
@@ -30,7 +36,7 @@
             });
             let selectTwoTarget = document.getElementById('selectTwo');
             let selectTwo = new CustomSelect(selectTwoTarget,{
-                data: list,
+                data: list2,
                 defaultValue: '111',
                 defaultName: '--- укажите ---',
                 onChange: function (values) {
