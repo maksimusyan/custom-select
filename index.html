@@ -12,6 +12,7 @@
 <body>
     <div class="content">
         <div id="selectOne"></div>
+        <div id="selectTwo"></div>
     </div>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
@@ -26,8 +27,15 @@
                 onChange: function (values) {
                     console.log(values);
                 }
-                //defaultValue: false, // строка или FALSE
-                //defaultName: false // строка или FALSE
+            });
+            let selectTwoTarget = document.getElementById('selectTwo');
+            let selectTwo = new CustomSelect(selectTwoTarget,{
+                data: list,
+                defaultValue: '111',
+                defaultName: '--- укажите ---',
+                onChange: function (values) {
+                    console.log(selectTwo.getValues());
+                }
             });
 
         });

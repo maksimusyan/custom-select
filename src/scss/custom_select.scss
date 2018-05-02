@@ -10,6 +10,9 @@ $border-color: #ddd;
 
   }
   .csw_list{
+    display: block;
+  }
+  .csw_list.hidden{
     display: none;
   }
 }
